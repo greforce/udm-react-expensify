@@ -1,0 +1,51 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "serve": "live-server public",
+    "build": "webpack",
+    "dev-server": "webpack-dev-server",
+    "babel-play": "babel ./src/playground/counter-example.js --out-file=./public/scripts/app.js --presets=env,react --watch",
+    "test": "jest --config=jest.config.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^23.6.0",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.9.4",
+    "react-test-renderer": "^16.7.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "moment": "^2.22.2",
+    "normalize.css": "^8.0.0",
+    "raf": "^3.4.1",
+    "react": "^16.0.0",
+    "react-dates": "^18.1.1",
+    "react-dom": "^16.0.0",
+    "react-modal": "^3.6.1",
+    "react-redux": "^5.1.0",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "uuid": "^3.3.2",
+    "validator": "^8.0.0"
+  }
+}
