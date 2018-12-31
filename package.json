@@ -4,11 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "serve": "live-server public",
     "build:dev": "webpack --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js",
     "dev-server": "webpack-dev-server --open --config webpack.dev.js",
-    "babel-play": "babel ./src/playground/counter-example.js --out-file=./public/scripts/app.js --presets=env,react --watch",
     "test": "jest --config=jest.config.json",
     "start": "node server/server.js",
     "heroku-postbuild": "npm run build:prod"
@@ -28,7 +26,6 @@
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.3.5",
     "jest": "^23.6.0",
-    "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.9.4",
     "react-test-renderer": "^16.7.0",
