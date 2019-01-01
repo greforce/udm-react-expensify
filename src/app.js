@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import 'react-dates/initialize';
 
-
 import configureStore from './store/configureStore';
-import { addExpense } from './actions/expenses';
-import { setTextFilter } from './actions/filters';
-import getVisibleExpenses from './selectors/expenses';
 import AppRouter from './routers/AppRouter';
+import './firebase/firebase';
+
 import 'normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
