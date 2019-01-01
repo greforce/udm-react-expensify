@@ -10,6 +10,7 @@ import './firebase/firebase';
 import 'normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
+import { startFetchExpenses } from './actions/expenses';
 
 const store = configureStore();
 
@@ -19,7 +20,8 @@ const jsx = (
   </Provider>
 );
 
-ReactDOM.render(
-  jsx,
-  document.getElementById('app')
-);
+ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+
+store.dispatch(startFetchExpenses()).then(() => {
+  ReactDOM.render(jsx, document.getElementById('app'));
+});

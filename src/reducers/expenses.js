@@ -1,9 +1,14 @@
+import { bindActionCreators } from "../../../../../Library/Caches/typescript/3.2/node_modules/redux";
+
 // Expenses reducer
 
 const expensesReducerDefaultState = [];
 
 export default (state = expensesReducerDefaultState, action) => {
   switch (action.type) {
+    case 'FETCH_EXPENSES':
+      return action.expenses;
+      
     case 'ADD_EXPENSE':
       return [
         ...state,

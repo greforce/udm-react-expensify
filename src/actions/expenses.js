@@ -38,3 +38,24 @@ export const editExpense = (id, updates) => ({
   id,
   updates,
 });
+
+// FETCH_EXPENSES
+export const fetchExpenses = (expenses) => ({
+  type: 'FETCH_EXPENSES',
+  expenses,
+});
+
+export const startFetchExpenses = () => {
+  return (dispatch) => {
+    return database.ref('expenses').once('value').then((snapshot) => {
+      const expenses = [];
+      snapshot.forEach((childSnapshot) => {
+        expenses.push({
+          id: childSnapshot.key,
+          ...childSnapshot.val(),
+        });
+      });
+      dispatch(fetchExpenses(expenses));
+    });
+  };
+};
