@@ -84,7 +84,6 @@ test('should edit expense in database and store', (done) => {
     });
     return database.ref(`expenses/${id}`).once('value');
   }).then((snapshot) => {
-    console.log(snapshot.val());
     expect(snapshot.val()).toEqual(updates);
     done();
   });
